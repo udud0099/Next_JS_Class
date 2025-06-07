@@ -1,3 +1,11 @@
+import Hero from "./components/Hero";
+import Projects from "./components/Projects";
+
 export default function Home() {
-  return <h1>hello bro</h1>;
+  return (
+    <>
+      <Hero />
+      <Projects />
+    </>
+  );
 }

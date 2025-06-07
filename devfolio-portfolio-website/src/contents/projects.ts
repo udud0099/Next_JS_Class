@@ -1,7 +1,7 @@
-// import { Project } from "@/types";
+import { Project } from "@/types";
 
-// export const projects: Project[] = [
-export const projects = [
+export const projects: Project[] = [
+  // export const projects = [
   {
     title: "E-commerce Platform",
     description:
