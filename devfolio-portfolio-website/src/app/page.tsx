@@ -6,6 +6,8 @@ export default function Home() {
     <>
       <Hero />
       <Projects />
+
+      <h1 className="h1_test_rajes">hello bro</h1>
     </>
   );
 }

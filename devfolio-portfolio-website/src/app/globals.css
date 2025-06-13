@@ -21,6 +21,9 @@ a {
 }
 
 @layer components {
+  .Hero_social_media_icons {
+    @apply text-2xl text-gray-600 hover:text-primary dark:text-gray-300 transition-colors duration-300;
+  }
   .container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }

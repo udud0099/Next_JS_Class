@@ -24,22 +24,13 @@ const Hero = () => {
         </p>
 
         <div className="flex justify-center space-x-4 mb-8">
-          <Link
-            href="/"
-            className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 transition-colors duration-300 "
-          >
+          <Link href="/" className="Hero_social_media_icons ">
             <FaGithub />
           </Link>
-          <Link
-            href="/"
-            className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 transition-colors duration-300 "
-          >
+          <Link href="/" className="Hero_social_media_icons ">
             <FaLinkedin />
           </Link>
-          <Link
-            href="/"
-            className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 transition-colors duration-300 "
-          >
+          <Link href="/" className="Hero_social_media_icons">
             <FaTwitter />
           </Link>
         </div>

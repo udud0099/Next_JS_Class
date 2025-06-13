@@ -1,0 +1,12 @@
+tsc --init
+
+tsc file name
+tsc app.ts
+
+tsc --watch
+
+
+
+
+
+
