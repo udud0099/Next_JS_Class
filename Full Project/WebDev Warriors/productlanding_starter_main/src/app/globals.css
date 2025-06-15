@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #b50042;
+}
+@layer components {
+  /* make all page same side width. bootstrap container */
+  .own_container {
+    @apply w-[95%] mx-auto md:w-[90%] lg:w-[80%] xl:w-[70%];
+  }
+  /* main heading title */
+  .main_heading {
+    @apply text-[clamp(1.5rem,5vw,3rem)] font-bold;
+  }
+  /* font_16px_12px */
+  .font_16px_12px {
+    @apply text-[12px] md:text-[14px] xl:text-[16px];
+  }
+  .font_14px_12px {
+    @apply text-[12px] md:text-[13px] xl:text-[14px];
+  }
+}
