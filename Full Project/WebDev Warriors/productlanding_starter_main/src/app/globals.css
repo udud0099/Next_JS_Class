@@ -2,11 +2,16 @@
 
 @theme {
   --color-primary: #b50042;
+  --color-heading: #000000;
+  --color-content:#4a5565;
 }
 @layer components {
   /* make all page same side width. bootstrap container */
   .own_container {
     @apply w-[95%] mx-auto md:w-[90%] lg:w-[80%] xl:w-[70%];
+  }
+  .own_ver_space {
+    @apply my-15 md:my-20 lg:my-25 xl:my-30;
   }
   /* main heading title */
   .main_heading {
