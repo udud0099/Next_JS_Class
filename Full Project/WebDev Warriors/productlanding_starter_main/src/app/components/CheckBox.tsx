@@ -4,7 +4,7 @@ import { FaCheckCircle } from "react-icons/fa";
 const CheckBox = () => {
   return (
     <>
-      <FaCheckCircle className="text-primary mr-2 inline-block" />
+      <FaCheckCircle className="text-primary mr-2 inline-block w-6 h-6" />
     </>
   );
 };

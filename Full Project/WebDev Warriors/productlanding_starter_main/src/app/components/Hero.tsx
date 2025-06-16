@@ -77,33 +77,52 @@ const Hero = () => {
       </div>
 
       <div className="own_container own_ver_space">
-        <div className="grid grid-cols-1   lg:grid-cols-2 gap-6">
-          <div className="py-30 md:py-30 lg:py-40 xl:py-55">
-            <h1 className="main_heading leading-[1.1] text-heading">
-              Superior sound, tangible quality
+        <div className="grid grid-cols-1   lg:grid-cols-2 gap-6 own_ver_space">
+          <div className="">
+            <h1 className="main_heading leading-[1.1] text-heading mb-2">
+              Pure sound, no added noise
             </h1>
-            <p className="text-[16px]  my-6">
-              {" "}
-              <CheckBox />
-              <span>High-Resolution Audio compatible</span>
-            </p>
-            <p className="text-[16px]  my-6">
-              {" "}
-              <CheckBox />
-              <span>
-                High quality wireless audio with BLUETOOTH® and LDAC technology
-              </span>
-            </p>
-            <p className="text-[16px]  my-6">
-              {" "}
-              <CheckBox />
-              Smart listening experience by Adaptive Sound Control
-            </p>
-            <p className="text-[16px]  my-6">
-              {" "}
-              <CheckBox />
-              Ergonomic, enfolding design earpads
-            </p>
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <CheckBox />
+                  </td>
+                  <td className="font_16px_only py-4">
+                    {" "}
+                    High-Resolution Audio compatible{" "}
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <CheckBox />
+                  </td>
+                  <td className="font_16px_only py-4">
+                    High quality wireless audio with BLUETOOTH® and LDAC
+                    technology
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <CheckBox />
+                  </td>
+                  <td className="font_16px_only py-4">
+                    Smart listening experience by Adaptive Sound Control
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <CheckBox />
+                  </td>
+                  <td className="font_16px_only py-4">
+                    Ergonomic, enfolding design earpads
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="google.com" className="a_tag_link">
+              Learn More
+            </a>
           </div>
           <div className="">
             <Image
@@ -112,6 +131,65 @@ const Hero = () => {
               width={400}
               height={400}
             />
+          </div>
+        </div>
+      </div>
+
+      <div className="own_container own_ver_space">
+        <div className="grid grid-cols-1   lg:grid-cols-2 gap-6 own_ver_space">
+          <div className="order-2 lg:order-1">
+            <Image
+              src="/images/hero.png"
+              alt="Profile"
+              width={400}
+              height={400}
+            />
+          </div>
+          <div className="order-1 lg:order-2">
+            <h1 className="main_heading leading-[1.1] text-heading mb-2">
+              Capture pure sound with the 70mm HD Driver
+            </h1>
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <CheckBox />
+                  </td>
+                  <td className="font_16px_only py-4">
+                    {" "}
+                    High-Resolution Audio compatible{" "}
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <CheckBox />
+                  </td>
+                  <td className="font_16px_only py-4">
+                    High quality wireless audio with BLUETOOTH® and LDAC
+                    technology
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <CheckBox />
+                  </td>
+                  <td className="font_16px_only py-4">
+                    Smart listening experience by Adaptive Sound Control
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <CheckBox />
+                  </td>
+                  <td className="font_16px_only py-4">
+                    Ergonomic, enfolding design earpads
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="google.com" className="a_tag_link">
+              Learn More
+            </a>
           </div>
         </div>
       </div>
