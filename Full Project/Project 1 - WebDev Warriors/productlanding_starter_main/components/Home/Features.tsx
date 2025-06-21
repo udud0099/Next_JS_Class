@@ -49,7 +49,13 @@ const Features = () => {
       <div className="w-[80%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {featureData.map((feature, index) => {
           return (
-            <div key={index} className="text-center mx-auto">
+            <div
+              key={index}
+              className="text-center mx-auto"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+              data-aos-anchor-placement="top-center"
+            >
               <div className="mx-auto text-center">{feature.icon}</div>
               <h1 className="mt-4 text-lg font-semibold text-gray-900 dark:text-white">
                 {feature.title}
