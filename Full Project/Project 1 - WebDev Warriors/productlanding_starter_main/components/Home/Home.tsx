@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import Features from "./Features";
 import About from "./About";
 import Review from "./Review/Review";
+import Contact from "./Contact";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
         title="Capture pure sound with the 70mm HD Driver"
       />
       <Review />
+      <Contact />
     </div>
   );
 };
