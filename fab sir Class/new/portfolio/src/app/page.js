@@ -1,12 +1,19 @@
 import Hero from "./components/Hero";
+import MyProject from "./components/MyProject";
+import MyResume from "./components/MyResume";
+import MySkill from "./components/MySkill";
 import OurClient from "./components/OurClient";
 
 export default function page() {
   return (
     <>
-      <h1>Home Page</h1>
-      <Hero />
-      <OurClient />
+      <div className="container">
+        <Hero />
+        <OurClient />
+        <MySkill />
+        <MyProject />
+        <MyResume />
+      </div>
     </>
   );
 }

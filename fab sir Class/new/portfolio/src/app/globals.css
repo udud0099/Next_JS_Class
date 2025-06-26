@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #263238;
+  --color-primary: #212121;
   --color-secondary: #a2a2a2;
 }
 
@@ -17,6 +17,11 @@
   /* main text just like sub heading*/
   .main_text_p {
     font-size: clamp(16px, 4vw, 20px);
+    @apply text-secondary font-medium;
+  }
+  /* common  text  */
+  .common_text {
+    font-size: clamp(12px, 4vw, 16px);
     @apply text-secondary font-medium;
   }
 }

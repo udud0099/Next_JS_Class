@@ -12,31 +12,37 @@ export default function OurClient() {
             src="/images/company/logo-coinbase.svg"
             width={160}
             height={160}
+            alt="client img"
           />
           <Image
             src="/images/company/logo-spotify.svg"
             width={160}
             height={160}
+            alt="client img"
           />
           <Image
             src="/images/company/logo-pinterest.svg"
             width={160}
             height={160}
+            alt="client img"
           />
           <Image
             src="/images/company/logo-google.svg"
             width={160}
             height={160}
+            alt="client img"
           />
           <Image
             src="/images/company/logo-amazon.svg"
             width={160}
             height={160}
+            alt="client img"
           />
           <Image
             src="/images/company/logo-netflix.svg"
             width={160}
             height={160}
+            alt="client img"
           />
         </div>
       </div>
