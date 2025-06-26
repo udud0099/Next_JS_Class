@@ -1,3 +1,5 @@
+import CommonButton from "./CommonButton";
+
 export default function Navbar() {
   return (
     <>
@@ -14,9 +16,7 @@ export default function Navbar() {
               <button className="py-2 px-6 hover:bg-gray-200 rounded-xl uppercase ">
                 sign up
               </button>
-              <button className="py-2 px-6 bg-black text-white rounded-xl uppercase">
-                sign in
-              </button>
+              <CommonButton common_btn_context="sign in" />
             </div>
           </div>
         </div>
