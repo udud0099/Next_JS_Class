@@ -23,7 +23,7 @@ export default function MyResume() {
       <div className="py-24 px-8">
         <div className="flex gap-4 md:gap-12 lg:gap-24 xl:gap-32 flex-wrap flex-col md:flex-row">
           <div className="flex-1">
-            <h1 className="main_heading_h1">My Resume</h1>
+            <h1 className="text-primary font-bold leading-[1.1] text-[36px]">My Resume</h1>
             <p className="common_text my-4">
               Highly skilled and creative Web Developer with 5+ years of
               experience in crafting visually stunning and functionally robust
