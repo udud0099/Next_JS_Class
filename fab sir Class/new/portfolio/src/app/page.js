@@ -1,4 +1,5 @@
 import ContactUs from "./components/ContactUs";
+import Fotter from "./components/Fotter";
 import Hero from "./components/Hero";
 import MyProject from "./components/MyProject";
 import MyResume from "./components/MyResume";
@@ -19,6 +20,7 @@ export default function page() {
         <Testimonials />
         <PopularClients />
         <ContactUs />
+        <Fotter />
       </div>
     </>
   );

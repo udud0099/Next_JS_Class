@@ -24,4 +24,7 @@
     font-size: clamp(12px, 4vw, 16px);
     @apply text-secondary font-medium;
   }
+  .contactUsInput {
+    @apply border border-gray-300 rounded-sm block w-full mt-2	 px-4 py-2;
+  }
 }

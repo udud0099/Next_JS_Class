@@ -5,9 +5,9 @@ export default function Hero() {
   return (
     <>
       <div className="pt-16  ">
-        <div >
+        <div>
           <div className="hero_box flex gap-x-24 gap-y-8 justify-between flex-col lg:flex-row items-center p-8">
-            <div className="hero_con flex-1  order-2 lg:order-1  ">
+            <div className="hero_con flex-1 lg:flex-[0.3] xl:flex-1  order-2 lg:order-1  ">
               <h1 className="main_heading_h1">
                 Welcome to my Web Development Portofolio!
               </h1>
@@ -38,7 +38,7 @@ export default function Hero() {
                 </p>
               </div>
             </div>
-            <div className="hero_img flex-1  order-1 lg:order-2">
+            <div className="hero_img flex-1 lg:flex-[0.7] xl:flex-1  order-1 lg:order-2">
               <Image
                 src="/images/hero.jpg"
                 alt="ok"

@@ -21,7 +21,7 @@ export default function Testimonials() {
 
         <div className="py-8   mt-8">
           <div className="flex gap-4 md:gap-12 lg:gap-24 xl:gap-32 flex-wrap flex-col lg:flex-row">
-            <div className="flex-1">
+            <div className="flex-[.6]">
               <h1 className="text-primary font-bold leading-[1.1] text-[36px]">
                 Mobile App Development
               </h1>
@@ -56,7 +56,7 @@ export default function Testimonials() {
                 ))}
               </div>
             </div>
-            <div className="flex-1">
+            <div className="flex-[.4]">
               <Image
                 src={`/images/avatar${activeImg + 1}.jpg`}
                 alt={`${activeImg + 1}_img`}
