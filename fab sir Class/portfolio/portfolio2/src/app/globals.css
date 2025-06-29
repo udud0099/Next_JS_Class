@@ -23,12 +23,19 @@
   }
   /* pages main hr line */
   .page_main_hr {
-    @apply h-1 w-[100px] bg-action block;
+    @apply h-1 w-[60px] bg-action block;
   }
   /* pages main text */
   .page_main_p {
     font-size: clamp(12px, 4vw, 16px);
     @apply text-secondary;
-  } 
-  
+  }
+
+  /* Only affects this component because of the unique parent class */
+  .my-service-card:hover .hover-bg {
+    background-color: var(--hover-color);
+  }
+  .my-service-card:hover .hover-icon {
+    color: white;
+  }
 }
