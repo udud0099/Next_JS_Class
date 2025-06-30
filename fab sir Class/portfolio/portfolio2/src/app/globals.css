@@ -2,7 +2,7 @@
 
 @theme {
   --color-primary: #222222;
-  --color-secondary: #a19f9f;
+  --color-secondary: #858585;
   --color-action: #34b7a7;
   --color-action_hover: #38c9b8;
 }
@@ -14,11 +14,16 @@
 
   /* pages main heading box */
   .page_main_box {
-    @apply flex flex-col gap-4   justify-center items-center my-12;
+    @apply flex flex-col gap-4   justify-center items-center mb-12;
   }
   /* pages main heading */
   .page_main_h1 {
     font-size: clamp(18px, 4vw, 32px);
+    @apply text-primary font-semibold;
+  }
+  /* pages  sub heading h1 */
+  .page_sub_h1 {
+    font-size: clamp(14px, 4vw, 24px);
     @apply text-primary font-semibold;
   }
   /* pages main hr line */

@@ -62,7 +62,7 @@ export default function page() {
   const [hoverIndex, setHoverIndex] = useState(null);
   return (
     <>
-      <div className="container mb-20">
+      <div className="container my-20">
         <div className="page_main_box">
           <h1 className="page_main_h1">Services</h1>
           <span className="page_main_hr"></span>
@@ -99,9 +99,7 @@ export default function page() {
                     />
                   </div>
                 </div>
-                <h1 className="text-primary font-semibold text-[14px] md:text-[18px] lg:text-[24px] my-4 ">
-                  {data.title}
-                </h1>
+                <h1 className=" page_sub_h1 my-4 ">{data.title}</h1>
                 <p className="text-secondary text-[12px] md:text-[14px]">
                   {data.content}
                 </p>
