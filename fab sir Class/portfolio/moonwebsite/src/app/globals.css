@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #222222;
+  --color-secondary: #858585;
+  --color-action: #34b7a7;
+  --color-action_hover: #38c9b8;
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-28;
+  }
+}
