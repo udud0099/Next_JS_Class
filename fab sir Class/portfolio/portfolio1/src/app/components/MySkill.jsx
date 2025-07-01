@@ -40,7 +40,7 @@ export default function MySkill() {
   ];
   return (
     <>
-      <div className="py-24 px-8 text-center">
+      <div className="py-24 px-8 text-center" id="Skills">
         <h1 className="  text-[16px] font-bold   text-primary">My Skills</h1>
         <h1 className="main_heading_h1 pt-2  pb-4">What I do</h1>
         <p className="main_text_p w-[90%] md:w-[80%] lg:w-[70%] mx-auto">

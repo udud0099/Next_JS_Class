@@ -20,7 +20,7 @@ export default function MyResume() {
   ];
   return (
     <>
-      <div className="py-24 px-8">
+      <div className="py-24 px-8" id="Resume">
         <div className="flex gap-4 md:gap-12 lg:gap-24 xl:gap-32 flex-wrap flex-col md:flex-row">
           <div className="flex-[.4]">
             <h1 className="text-primary font-bold leading-[1.1] text-[36px]">

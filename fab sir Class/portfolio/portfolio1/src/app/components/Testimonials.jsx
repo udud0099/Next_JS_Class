@@ -7,7 +7,10 @@ export default function Testimonials() {
   const [activeImg, setActiveImg] = useState(0);
   return (
     <>
-      <div className="py-24 px-12 md:px-24 lg:px-32 lx:px-64 ">
+      <div
+        className="py-24 px-12 md:px-24 lg:px-32 lx:px-64 "
+        id="Testimonials"
+      >
         <div className="text-center">
           <h1 className="  text-[16px] font-bold   text-primary">
             Testimonials

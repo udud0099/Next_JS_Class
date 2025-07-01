@@ -11,10 +11,31 @@ export default function Fotter() {
             ThemeWagon
           </p>
           <div className="flex gap-4 items-center">
-            <Link href="">Home</Link>
-            <Link href="">About Us</Link>
-            <Link href="">Blog</Link>
-            <Link href="">Service</Link>
+            <ul className="list-none hidden lg:flex gap-6 font-semibold    ">
+              <a href="#Skills">
+                <li>Skills</li>
+              </a>
+              <a href="#Projects">
+                {" "}
+                <li>Projects</li>
+              </a>
+              <a href="#Resume">
+                {" "}
+                <li>Resume</li>
+              </a>
+              <a href="#Testimonials">
+                {" "}
+                <li>Testimonials</li>
+              </a>
+              <a href="#Clients">
+                {" "}
+                <li>Clients</li>
+              </a>
+              <a href="#Contact">
+                {" "}
+                <li>Contact</li>
+              </a>
+            </ul>
             <CommonButton common_btn_context="subscribe" />
           </div>
         </div>

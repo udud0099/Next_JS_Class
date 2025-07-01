@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function PopularClients() {
   return (
     <>
-      <div className="py-24 px-8">
+      <div className="py-24 px-8" id="Clients">
         <h1 className="text-center text-[16px] font-bold mb-8 text-primary">
           Popular Clients
         </h1>

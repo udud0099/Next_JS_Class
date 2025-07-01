@@ -32,7 +32,7 @@ export default function Navbar() {
               <Link
                 href={item.url}
                 key={index}
-                className={`relative group transition-all duration-50 px-4 hover:text-action ${
+                className={`relative group   px-4 hover:text-action ${
                   isActive ? "  text-action" : ""
                 }`}
               >

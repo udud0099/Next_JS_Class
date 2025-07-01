@@ -6,7 +6,7 @@ import CommonButton from "./CommonButton";
 export default function ContactUs() {
   return (
     <>
-      <div className="py-24 px-8 text-center">
+      <div className="py-24 px-8 text-center" id="Contact">
         <h1 className="  text-[16px] font-bold   text-primary">Get in Touch</h1>
         <h1 className="main_heading_h1 pt-2  pb-4">Contact Us</h1>
         <p className="main_text_p w-[90%] md:w-[80%] lg:w-[70%] mx-auto">
