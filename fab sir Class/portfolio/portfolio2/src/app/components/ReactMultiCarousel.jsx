@@ -7,59 +7,40 @@ import { FaStar } from "react-icons/fa";
 import { FaQuoteLeft } from "react-icons/fa6";
 import { FaQuoteRight } from "react-icons/fa6";
 
-const responsive = {
-  superLargeDesktop: {
-    // screens >= 1600px
-    breakpoint: { max: 4000, min: 1600 },
-    items: 1,
+const Testimonials_owl = [
+  {
+    name: "Saul Goodman",
+    post: "Ceo & Founder",
+    star: 4,
+    con: "Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper. ",
   },
-  desktop: {
-    breakpoint: { max: 1600, min: 1024 },
-    items: 1,
+  {
+    name: "Sara Wilsson",
+    post: "Designer",
+    star: 5,
+    con: "Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.",
   },
-  tablet: {
-    breakpoint: { max: 1024, min: 640 },
-    items: 1,
+  {
+    name: "Jena Karlis",
+    post: "Store Owner",
+    star: 5,
+    con: "Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.",
   },
-  mobile: {
-    breakpoint: { max: 640, min: 0 },
-    items: 1,
+  {
+    name: "Matt Brandon",
+    post: "Freelancer",
+    star: 4,
+    con: "Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.",
   },
-};
-
+  {
+    name: "John Larson",
+    post: "Entrepreneur",
+    star: 5,
+    con: "Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.",
+  },
+];
 export default function ReactMultiCarousel() {
-  const Testimonials_owl = [
-    {
-      name: "Saul Goodman",
-      post: "Ceo & Founder",
-      star: 4,
-      con: "Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper. ",
-    },
-    {
-      name: "Sara Wilsson",
-      post: "Designer",
-      star: 5,
-      con: "Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.",
-    },
-    {
-      name: "Jena Karlis",
-      post: "Store Owner",
-      star: 5,
-      con: "Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.",
-    },
-    {
-      name: "Matt Brandon",
-      post: "Freelancer",
-      star: 4,
-      con: "Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.",
-    },
-    {
-      name: "John Larson",
-      post: "Entrepreneur",
-      star: 5,
-      con: "Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.",
-    },
-  ];
+  
   return (
     <>
       <Carousel
