@@ -1,14 +1,14 @@
-import AddUsers from "./components/AddUsers";
-import DispalaysUjser from "./components/DisplayUsers";
+import AddEmployees from "./components/AddEmployees";
+import ShowEmployees from "./components/ShowEmployees";
 
 export default function Home() {
   return (
     <>
       <h1>home page</h1>
       <br />
-      <AddUsers />
+      <AddEmployees />
       <hr />
-      <DispalaysUjser />
+      <ShowEmployees />
     </>
   );
 }

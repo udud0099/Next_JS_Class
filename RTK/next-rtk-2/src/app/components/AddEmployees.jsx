@@ -1,13 +1,13 @@
 "use client";
 import React, { useState } from "react";
-import { addUser } from "../redux/slice";
+import { addEmployee } from "../reduxToolkit/slice";
 import { useDispatch } from "react-redux";
 
-const AddUsers = () => {
+const AddEmployees = () => {
   const [name, setName] = useState("");
   const dispatch = useDispatch();
   const userDispatch = () => {
-    dispatch(addUser(name));
+    dispatch(addEmployee(name));
     setName("");
   };
   return (
@@ -25,4 +25,4 @@ const AddUsers = () => {
   );
 };
 
-export default AddUsers;
+export default AddEmployees;

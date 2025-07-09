@@ -1,24 +1,24 @@
-// const { createSlice, nanoid } = require("@reduxjs/toolkit");
-// const { default: AddUsers } = require("../components/AddUsers");
+const { createSlice, nanoid } = require("@reduxjs/toolkit");
+const { default: AddEmployees } = require("../components/AddEmployees");
 
-// const initialState = {
-//   users: [],
-// };
-// const Slice = createSlice({
-//   name: "addUserSlice",
-//   initialState,
-//   reducers: {
-//     addUser: (state, action) => {
-//       //   console.log(action);
+const initialState = {
+  employees: [],
+};
+const Slice = createSlice({
+  name: "addEmployeeSlice",
+  initialState,
+  reducers: {
+    addEmployee: (state, action) => {
+      //   console.log(action);
 
-//       const data = {
-//         id: nanoid(),
-//         name: action.payload,
-//       };
-//       state.users.push(data);
-//     },
-//   },
-// });
+      const data = {
+        id: nanoid(),
+        name: action.payload,
+      };
+      state.employees.push(data);
+    },
+  },
+});
 
-// export const { addUser } = Slice.actions;
-// export default Slice.reducer;
+export const { addEmployee } = Slice.actions;
+export default Slice.reducer;

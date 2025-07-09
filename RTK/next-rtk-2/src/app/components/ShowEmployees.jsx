@@ -2,9 +2,9 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-const DisplayUsers = () => {
-  const userData = useSelector((data) => data.users);
-  console.log(userData);
+const ShowEmployees = () => {
+  const userData = useSelector((data) => data.employees);
+  // console.log(userData);
 
   return (
     <div>
@@ -18,4 +18,4 @@ const DisplayUsers = () => {
   );
 };
 
-export default DisplayUsers;
+export default ShowEmployees;
