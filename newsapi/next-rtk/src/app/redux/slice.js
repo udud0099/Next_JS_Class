@@ -1,9 +1,6 @@
 const { createSlice, nanoid } = require("@reduxjs/toolkit");
 const { default: AddUsers } = require("../components/AddUsers");
 
-// src/features/news/newsApiSlice.ts
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-
 const initialState = {
   users: [],
 };
@@ -29,5 +26,5 @@ const Slice = createSlice({
   },
 });
 
-export const { useGetTopHeadlinesQuery } = Slice.actions;
+export const { addUser, removeUser } = Slice.actions;
 export default Slice.reducer;

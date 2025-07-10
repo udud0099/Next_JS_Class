@@ -2,24 +2,29 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { removeUser } from "../redux/slice";
+
+import { useGetTopHeadlinesQuery } from "../redux/slice";
+
+// import {  } from "../features/news/newsApiSlice";
 
 const DisplayUsers = () => {
-  const userData = useSelector((data) => data.users);
-  console.log(userData);
-  const dispatch = useDispatch();
+  const { data, isLoading, isError } = useGetTopHeadlinesQuery();
 
+  if (isLoading) return <p>Loading...</p>;
+  if (isError) return <p>Error loading news.</p>;
   return (
     <div>
       DispalaysUjser
       <hr></hr>
       <br />
-      {userData.map((item, index) => (
-        <div key={index}>
-          <h1>{item.name} </h1>
-          <button onClick={() => dispatch(removeUser(item.id))}>del</button>
-        </div>
-      ))}
+      <div>
+        {data.articles.map((a) => (
+          <div key={a.url}>
+            <h3>{a.title}</h3>
+            <p>{a.description}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
