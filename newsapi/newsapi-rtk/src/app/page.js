@@ -6,9 +6,14 @@ export default function Home() {
     <>
       <h1>home page</h1>
       <br />
-      {/* <AddUsers /> */}
+      <AddUsers />
       <hr />
       <DispalaysUjser />
+      <br />
+      <br />
+      <br />
+      <br />
+
     </>
   );
 }
