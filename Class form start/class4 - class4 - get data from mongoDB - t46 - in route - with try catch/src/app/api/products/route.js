@@ -17,12 +17,3 @@ export async function GET() {
 
   return NextResponse.json({ result: data, success: true });
 }
-
-export async function POST(request) {
-  const payload = await request.json();
-  await mongoose.connect(connectionSrt);
-
-  let product = new Product(payload);
-  const result = await product.save();
-  return NextResponse.json({ result, success: true });
-}
