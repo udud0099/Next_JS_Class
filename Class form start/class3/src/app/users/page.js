@@ -1,3 +1,4 @@
+import DeleteUser from "@/util/DeleteUser";
 import Link from "next/link";
 import React from "react";
 async function getUsers() {
@@ -15,6 +16,12 @@ const userlist = async () => {
         {users.map((item, index) => (
           <div key={index}>
             <Link href={`users/${item.id}`}>{item.name}</Link>
+            <span>
+              <Link href={`users/${item.id}/update`}>Edit</Link>
+            </span>
+            <span>
+              <DeleteUser id={item.id} />
+            </span>
           </div>
         ))}
       </div>
