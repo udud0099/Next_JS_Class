@@ -4,10 +4,16 @@ import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  await mongoose.connect(connectionSrt);
+  // console.log(data);
 
-  const data = await Product.find();
-  console.log(data);
+  let data = [];
+  try {
+    await mongoose.connect(connectionSrt);
 
-  return NextResponse.json({ result: data });
+    data = await Product.find();
+  } catch (error) {
+    data = { success: false };
+  }
+
+  return NextResponse.json({ result: data, success: true });
 }
