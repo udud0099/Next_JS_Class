@@ -1,20 +1,43 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-const Page = () => {
+const Page = (props) => {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [company, setCompany] = useState("");
   const [color, setColor] = useState("");
   const [category, setCategory] = useState("");
 
-  const addProduct = async () => {
-    console.log(name, price, company, color, category);
-    let result = await fetch("http://localhost:3000/api/products", {
-      method: "POST",
-      body: JSON.stringify({ name, price, company, color, category }),
-    });
-    result = await result.json();
+  useEffect(() => {
+    getProductDetail();
+  }, []);
+
+  const getProductDetail = async () => {
+    let productData = await fetch(
+      `http://localhost:3000/api/products/${props.params.editproduct}`
+    );
+    productData = await productData.json();
+
+    if (productData.success) {
+      let result = productData.result;
+      setName(result.name);
+      setPrice(result.price);
+      setCompany(result.company);
+      setColor(result.color);
+      setCategory(result.category);
+    }
+  };
+
+  const updateProduct = async () => {
+    // console.log(name, price, company, color, category);
+    let data = await fetch(
+      `http://localhost:3000/api/products/${props.params.editproduct}`,
+      {
+        method: "PUT",
+        body: JSON.stringify({ name, price, company, color, category }),
+      }
+    );
+    data = await data.json();
     setName("");
     setPrice("");
     setCompany("");
@@ -24,7 +47,7 @@ const Page = () => {
   return (
     <>
       <div>
-        <h1>Add Product</h1>
+        <h1>Update Product</h1>
         <div
           style={{
             display: "flex",
@@ -63,7 +86,7 @@ const Page = () => {
             value={category}
             onChange={(e) => setCategory(e.target.value)}
           />
-          <button onClick={addProduct}>Save data</button>
+          <button onClick={updateProduct}>Update data</button>
         </div>
       </div>
     </>
