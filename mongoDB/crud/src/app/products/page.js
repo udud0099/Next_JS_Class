@@ -1,8 +1,11 @@
 import Link from "next/link";
 import React from "react";
+import DeleteData from "../components/DeleteData";
 
 const getProducts = async () => {
-  let data = await fetch("http://localhost:3000/api/products");
+  let data = await fetch("http://localhost:3000/api/products", {
+    cache: "no-cache",
+  });
   data = await data.json();
   if (data.success) {
     return data.result;
@@ -37,7 +40,9 @@ const page = async () => {
                   <td>
                     <Link href={`products/${item._id}`}>edit</Link>
                   </td>
-                  <td>del</td>
+                  <td>
+                    <DeleteData id={item._id} />
+                  </td>
                 </tr>
               ))}
             </tbody>
