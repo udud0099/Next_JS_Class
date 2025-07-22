@@ -1,25 +1,23 @@
-'use client'
-import AddForm from '@/components/AddForm'
-import React, { useState } from 'react'
+import AddForm from "@/components/AddForm";
+// import React, { useState } from 'react'
 
 const Page = () => {
-    const [image, setImage] = useState("")
-    const [name, setName] = useState("")
-    const [price, setPrice] = useState("")
-    const [link, setLink] = useState("")
-    const [description, setDescription] = useState("")
+  // const [image, setImage] = useState("")
+  // const [name, setName] = useState("")
+  // const [price, setPrice] = useState("")
+  // const [link, setLink] = useState("")
+  // const [description, setDescription] = useState("")
   return (
     <>
-    <div>
-
+      <div>
         <h1>add new product</h1>
 
         <div>
-<AddForm />
+          <AddForm />
         </div>
-    </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

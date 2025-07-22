@@ -1,7 +1,6 @@
 "use server";
 
 import { connectDB } from "@/app/api/db/connectDB";
-import { error } from "console";
 import cloudinary from "./cloudinary";
 import Product from "@/app/api/models/product.model";
 
@@ -42,15 +41,15 @@ export async function addAction(formData: FormData) {
         )
         .end(buffer);
     });
-    console.log("image response: ", imageResponse);
+    // console.log("image response: ", imageResponse);
 
     // store in db
     await Product.create({
       image: imageResponse.secure_url,
-      name,
-      price,
-      link,
-      description,
+      name: name,
+      price: price,
+      link: link,
+      description: description,
     });
     return {
       success: "Product adder succesfully",

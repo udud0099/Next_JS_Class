@@ -17,6 +17,7 @@ const AddForm = () => {
     if (success) {
       toast.success(success);
       router.push("/");
+      setImageURL("");
     }
   }
   const handleImageChange = (e: ChangeEvent<HTMLInputElement>) => {
