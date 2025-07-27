@@ -16,6 +16,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 
+import bcrypt from "bcryptjs";
+
 const formSchema = z
   .object({
     username: z
@@ -63,8 +65,10 @@ export function ProfileForm() {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     const { username, password } = values;
+    const hashedPassword = bcrypt.hashSync(password, 16);
+
     // console.log(values);
-    console.log(username, password);
+    console.log(username, password, hashedPassword);
     form.reset();
   }
 
