@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lenis</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.3.8/dist/lenis.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+      html.lenis,
+      html.lenis body {
+        height: auto;
+      }
+
+      .lenis:not(.lenis-autoToggle).lenis-stopped {
+        overflow: clip;
+      }
+
+      .lenis.lenis-smooth [data-lenis-prevent] {
+        overscroll-behavior: contain;
+      }
+
+      .lenis.lenis-smooth iframe {
+        pointer-events: none;
+      }
+
+      .lenis.lenis-autoToggle {
+        transition-property: overflow;
+        transition-duration: 1ms;
+        transition-behavior: allow-discrete;
+      }
+    </style>
+  </head>
+  <body class="p-0 m-0">
+    <div class="w-full bg-gray-200">
+      <h1
+        class="text-8xl text-red-800 w-screen h-screen flex justyfy-center items-center bg-red-200"
+      >
+        test 11111
+      </h1>
+      <h1
+        id="modal"
+        data-lenis-prevent
+        class="text-8xl text-red-800 w-screen h-screen flex justyfy-center items-center bg-blue-200"
+      >
+        test 222222
+      </h1>
+      <h1
+        class="text-8xl text-red-800 w-screen h-screen flex justyfy-center items-center bg-green-200"
+      >
+        test 333333
+      </h1>
+      <h1
+        class="text-8xl text-red-800 w-screen h-screen flex justyfy-center items-center bg-pink-200"
+      >
+        test 4444444
+      </h1>
+    </div>
+    <script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.126.1/build/three.module.js",
+          "orbitcontrols": "https://unpkg.com/three@0.126.1/examples/jsm/controls/OrbitControls.js",
+          "datgui": "https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js",
+          "gsap": "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+        }
+      }
+    </script>
+    <script type="module" src="{% static 'blog/threeBackground.js' %}"></script>
+    <script>
+      const lenis = new Lenis({
+        // infinite: true,
+        syncTouch: true,
+        // prevent: (node) => node.id === "modal",
+        anchors: {
+          offset: 100,
+          onComplete: () => {
+            console.log("scrolled to anchor");
+          },
+        },
+        orientation: horizontal((e) => {
+          e.deltaY /= 2;
+        }),
+        gestureOrientation: horizontal((e) => {
+          e.deltaY /= 2;
+        }),
+        autoResize: ResizeObserver.resize(),
+        direction: -1,
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    </script>
+
+    <script>
+      // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
+      lenis.on("scroll", ScrollTrigger.update);
+
+      // Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
+      // This ensures Lenis's smooth scroll animation updates on each GSAP tick
+      gsap.ticker.add((time) => {
+        lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+      });
+
+      // Disable lag smoothing in GSAP to prevent any delay in scroll animations
+      gsap.ticker.lagSmoothing(0);
+    </script>
+  </body>
+</html>
