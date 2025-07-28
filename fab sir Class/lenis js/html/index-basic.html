@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lenis Smooth Scroll</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- (Optional) Lenis styles — only needed if you use data-lenis-prevent -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.0.37/dist/lenis.css"
+    />
+    <style>
+      body {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100vh;
+        scroll-behavior: smooth; /* fallback for browsers without Lenis */
+        margin: 0;
+      }
+
+      section {
+        scroll-snap-align: start;
+        height: 100vh;
+      }
+
+      .parallax {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .parallax h2 {
+        font-size: 4rem;
+        will-change: transform;
+      }
+      .fade-up {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      .section {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        background-color: #f3f3f3;
+        margin-bottom: 20px;
+      }
+      #progress-bar {
+        background: linear-gradient(90deg, #4ade80, #3b82f6);
+        height: 4px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        z-index: 9999;
+      }
+      .nav-link {
+        color: gray;
+        font-weight: 500;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+
+      .nav-link.active {
+        color: #3b82f6; /* blue */
+        font-weight: 700;
+      }
+      #section-dots button {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: gray;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      #section-dots button.active {
+        background-color: #3b82f6; /* blue */
+      }
+    </style>
+  </head>
+  <body class="p-0 m-0">
+    <nav class="fixed top-0 left-0 w-full bg-white shadow p-4 flex gap-6 z-50">
+      <a href="#section1" class="nav-link" data-scroll-to="#section1"
+        >Section 1</a
+      >
+      <a href="#section2" class="nav-link" data-scroll-to="#section2"
+        >Section 2</a
+      >
+      <a href="#section3" class="nav-link" data-scroll-to="#section3"
+        >Section 3</a
+      >
+    </nav>
+
+    <section id="section1" class="section">Section 1 content</section>
+    <section id="section2" class="section">Section 2 content</section>
+    <section id="section3" class="section">Section 3 content</section>
+
+    <nav>
+      <button data-scroll-to="#section1">Go to Section 1</button>
+      <button data-scroll-to="#section2">Go to Section 2</button>
+    </nav>
+
+    <section id="section1" class="section">Section 1</section>
+    <section id="section2" class="section">Section 2</section>
+    <div class="w-full bg-gray-200">
+      <h1
+        class="text-8xl text-red-800 w-screen h-screen flex justify-center items-center bg-red-200"
+      >
+        test 11111
+      </h1>
+      <div
+        id="progress-bar"
+        class="fixed top-0 left-0 h-1 bg-blue-600 w-0"
+      ></div>
+
+      <div class="fade-up w-screen h-screen bg-green-200 text-8xl text-blue">
+        I will fade up when visible
+      </div>
+
+      <h1
+        id="modal"
+        data-lenis-prevent
+        class="text-8xl text-red-800 w-screen h-screen flex justify-center items-center bg-blue-200"
+      >
+        test 222222
+      </h1>
+      <section id="section1" class="section">Section 1 content</section>
+      <section id="section2" class="section">Section 2 content</section>
+      <section id="section3" class="section">Section 3 content</section>
+      <div
+        id="section-dots"
+        class="fixed top-1/2 right-6 transform -translate-y-1/2 flex flex-col gap-4 z-50"
+      ></div>
+
+      <h1
+        class="text-8xl text-red-800 w-screen h-screen flex justify-center items-center bg-green-200"
+      >
+        test 333333
+      </h1>
+
+      <h1
+        class="animate-on-scroll text-8xl text-red-800 w-screen h-screen flex justify-center items-center bg-red-200"
+      >
+        Hello Scroll
+      </h1>
+
+      <h1
+        class="animate-on-scroll text-8xl text-red-800 w-screen h-screen flex justify-center items-center bg-blue-200"
+      >
+        Hello Scroll
+      </h1>
+      <h1
+        class="animate-on-scroll text-8xl text-red-800 w-screen h-screen flex justify-center items-center bg-red-900"
+      >
+        Hello Scroll
+      </h1>
+
+      <button
+        id="scrollToTop"
+        class="fixed bottom-6 right-6 bg-black text-white px-6 py-3 rounded-full shadow-lg hover:bg-gray-800 transition-all"
+      >
+        ↑ Top
+      </button>
+      <section class="parallax">
+        <h2 data-speed="0.5">Parallax Text</h2>
+      </section>
+      <section class="pinned-section bg-yellow-500">
+        <div class="pin-me">Pinned while scrolling</div>
+      </section>
+      <h1
+        class="text-8xl text-red-800 w-screen h-screen flex justify-center items-center bg-pink-200"
+      >
+        test 4444444
+      </h1>
+    </div>
+
+    <!-- ✅ FIXED Lenis Script CDN -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.37/dist/lenis.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+      const lenis = new Lenis({
+        duration: 1.5,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smooth: true,
+        direction: "vertical",
+        gestureDirection: "vertical",
+        smoothTouch: false,
+      });
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+
+      const scrollToTopButton = document.getElementById("scrollToTop");
+
+      scrollToTopButton.addEventListener("click", () => {
+        lenis.scrollTo(0);
+      });
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          scrollToTopButton.style.display = "block";
+        } else {
+          scrollToTopButton.style.display = "none";
+        }
+      });
+
+      // Start hidden
+      scrollToTopButton.style.display = "none";
+
+      // Setup ScrollTrigger to work with Lenis
+      gsap.registerPlugin(ScrollTrigger);
+
+      lenis.on("scroll", ScrollTrigger.update);
+
+      // Tell ScrollTrigger to use Lenis’ scroll instead of the browser
+      ScrollTrigger.scrollerProxy(document.body, {
+        scrollTop(value) {
+          return arguments.length ? lenis.scrollTo(value) : window.scrollY;
+        },
+        getBoundingClientRect() {
+          return {
+            top: 0,
+            left: 0,
+            width: window.innerWidth,
+            height: window.innerHeight,
+          };
+        },
+        pinType: document.body.style.transform ? "transform" : "fixed",
+      });
+
+      // Required for refresh (important)
+      // ScrollTrigger.addEventListener("refresh", () => lenis.update());
+      ScrollTrigger.refresh();
+
+      // Animate elements on scroll
+      gsap.utils.toArray(".animate-on-scroll").forEach((el) => {
+        gsap.from(el, {
+          opacity: 0,
+          y: 100,
+          duration: 1.2,
+          scrollTrigger: {
+            trigger: el,
+            start: "top 80%",
+            end: "top 30%",
+            scrub: true,
+          },
+        });
+      });
+
+      document.querySelectorAll("[data-speed]").forEach((el) => {
+        const speed = parseFloat(el.getAttribute("data-speed"));
+
+        gsap.to(el, {
+          y: () => -(window.innerHeight * speed),
+          ease: "none",
+          scrollTrigger: {
+            trigger: el,
+            scrub: true,
+          },
+        });
+      });
+
+      gsap.to(".pin-me", {
+        scrollTrigger: {
+          trigger: ".pinned-section",
+          start: "top top",
+          end: "bottom+=300 top",
+          pin: true,
+          scrub: true,
+        },
+      });
+      gsap.from(".fade-up", {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".fade-up",
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      });
+      // Select all buttons or links with the scroll-to attribute
+      document.querySelectorAll("[data-scroll-to]").forEach((el) => {
+        el.addEventListener("click", (e) => {
+          e.preventDefault();
+          const target = el.getAttribute("data-scroll-to");
+          lenis.scrollTo(target);
+        });
+      });
+      lenis.scrollTo("#section1");
+      lenis.scrollTo(500); // scrolls to 500px from top
+
+      lenis.on("scroll", () => {
+        const scrollY = lenis.scroll; // Current scroll position
+        const height = document.body.scrollHeight - window.innerHeight;
+        const progress = (scrollY / height) * 100;
+        const progressBar = document.getElementById("progress-bar");
+        progressBar.style.width = progress + "%";
+      });
+
+      // Smooth scroll on click
+      document.querySelectorAll("[data-scroll-to]").forEach((el) => {
+        el.addEventListener("click", (e) => {
+          e.preventDefault();
+          const target = el.getAttribute("data-scroll-to");
+          lenis.scrollTo(target);
+        });
+      });
+
+      // Scroll spy: highlight nav-link for current section
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      lenis.on("scroll", () => {
+        let currentSectionId = "";
+
+        sections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+          // Check if section top is near top of viewport
+          if (
+            rect.top <= window.innerHeight / 3 &&
+            rect.bottom >= window.innerHeight / 3
+          ) {
+            currentSectionId = section.id;
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.toggle(
+            "active",
+            link.getAttribute("data-scroll-to") === "#" + currentSectionId
+          );
+        });
+      });
+      // const sections = document.querySelectorAll("section");
+
+      function getCurrentSectionIndex() {
+        const scrollY = lenis.scroll;
+        let index = 0;
+        sections.forEach((section, i) => {
+          if (section.offsetTop <= scrollY + 10) {
+            index = i;
+          }
+        });
+        return index;
+      }
+
+      window.addEventListener("keydown", (e) => {
+        const currentIndex = getCurrentSectionIndex();
+
+        if (e.key === "ArrowDown") {
+          e.preventDefault();
+          if (currentIndex < sections.length - 1) {
+            lenis.scrollTo(sections[currentIndex + 1]);
+          }
+        } else if (e.key === "ArrowUp") {
+          e.preventDefault();
+          if (currentIndex > 0) {
+            lenis.scrollTo(sections[currentIndex - 1]);
+          }
+        }
+      });
+
+      const dotsContainer = document.getElementById("section-dots");
+      // const sections = document.querySelectorAll("section");
+
+      // Create dot buttons
+      sections.forEach((section, index) => {
+        const dot = document.createElement("button");
+        dot.addEventListener("click", () => {
+          lenis.scrollTo(section);
+        });
+        dotsContainer.appendChild(dot);
+      });
+
+      // Update active dot on scroll
+      lenis.on("scroll", () => {
+        const scrollY = lenis.scroll;
+        let currentIndex = 0;
+        sections.forEach((section, i) => {
+          if (section.offsetTop <= scrollY + 10) {
+            currentIndex = i;
+          }
+        });
+
+        const dots = dotsContainer.querySelectorAll("button");
+        dots.forEach((dot, i) => {
+          dot.classList.toggle("active", i === currentIndex);
+        });
+      });
+    </script>
+  </body>
+</html>
