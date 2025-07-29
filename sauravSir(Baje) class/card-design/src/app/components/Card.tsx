@@ -17,7 +17,7 @@ const Card = () => {
           <div className="group cursor-pointer rounded-4xl  bg-white shadow overflow-hidden  flex justify-between flex-col    transition-all duration-350 ease-in-out  hover:rounded-[40px]">
             <div className="text-black p-6">
               <p className="text-gray-600 text-base">Jul 24, 2025</p>
-              <h1 className="font-semibold text-3xl mt-4 mb-2">
+              <h1 className="font-semibold text-2xl mt-4 mb-2">
                 A Notion-style editor, ready to use in Tiptap Cloud
               </h1>
               <span className="py-1 px-2 rounded-md border border-gray-300 text-xs">
@@ -37,7 +37,7 @@ const Card = () => {
           <div className="group cursor-pointer rounded-4xl  bg-white shadow overflow-hidden   flex justify-between flex-col   transition-all duration-350 ease-in-out  hover:rounded-[40px]">
             <div className="text-black p-6">
               <p className="text-gray-600 text-base">Jul 12, 2025</p>
-              <h1 className="font-semibold text-3xl mt-4 mb-2">
+              <h1 className="font-semibold text-2xl mt-4 mb-2">
                 Tiptap 3.0 is stable
               </h1>
             </div>
@@ -54,7 +54,7 @@ const Card = () => {
           <div className="group cursor-pointer rounded-4xl  bg-white shadow overflow-hidden   flex justify-between flex-col   transition-all duration-350 ease-in-out  hover:rounded-[40px]">
             <div className="text-black p-6">
               <p className="text-gray-600 text-base">Jul 4, 2025</p>
-              <h1 className="font-semibold text-3xl mt-4 mb-2">
+              <h1 className="font-semibold text-2xl mt-4 mb-2">
                 Faster, lighter, and more reliable DOCX import/export with
                 Tiptap
               </h1>

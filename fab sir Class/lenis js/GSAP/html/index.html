@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+
+  <style>
+    /* Global styles come from external css https://codepen.io/GreenSock/pen/gOWxmWG */
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .box {
+      display: block;
+    }
+    .blue {
+      background-color: blue;
+    }
+    .red {
+      background-color: red;
+    }
+  </style>
+  <body>
+    <h1 class="text-8xl">l</h1>
+    <div class="box green w-28 h-28 rounded-full bg-green-700"></div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <script>
+      // gsap.to(".box", {
+      //   x: 200,
+      // });
+      gsap.fromTo(".box", { x: -40, fill: "red" }, { x: 404, fill: "blue" });
+    </script>
+  </body>
+</html>
