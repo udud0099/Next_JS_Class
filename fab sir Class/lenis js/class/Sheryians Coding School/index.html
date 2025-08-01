@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.8/dist/lenis.css">
+  <style>
+    body {
+      overflow-x: hidden;
+      background-color: rgb(34, 34, 34);
+      color: white;
+    }
+  </style>
+  <body>
+    <div class="w-full">
+      <div class="w-full h-screen bg-red-900 flex justify-center items-center">
+        <h1 class="text-9xl font-semibold">hello 1</h1>
+      </div>
+      <div class="w-full h-screen bg-blue-900 flex justify-center items-center">
+        <h1 class="text-9xl font-semibold">hello 2</h1>
+      </div>
+      <div class="w-full h-screen bg-red-900 flex justify-center items-center">
+        <h1 class="text-9xl font-semibold">hello 3</h1>
+      </div>
+    </div>
+    <script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script>
+
+    <script>
+      // Initialize Lenis
+      const lenis = new Lenis();
+
+      // Use requestAnimationFrame to continuously update the scroll
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    </script>
+  </body>
+</html>
