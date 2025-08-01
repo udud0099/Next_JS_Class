@@ -6,28 +6,126 @@
     <title>Document</title>
   </head>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.8/dist/lenis.css">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.8/dist/lenis.css" />
   <style>
     body {
       overflow-x: hidden;
       background-color: rgb(34, 34, 34);
       color: white;
     }
+    .grid > div {
+      grid-row: var(--r);
+      grid-column: var(--c);
+    }
+    img {
+      rotate: 0 deg;
+      scale: 1;
+      opacity: 1;
+    }
   </style>
   <body>
+    <div
+      class="w-52 h-8 rounded-md fixed top-10 right-10 z-[100] py-1 px-4"
+      id="optBox"
+    >
+      <label for="cars">Choose Style:</label>
+      <select name="myStyle" id="myStyle">
+        <option value="style1" selected>1 Style</option>
+        <option value="style2">2 Style</option>
+        <option value="style3">3 Style</option>
+        <option value="style4">4 Style</option>
+      </select>
+    </div>
     <div class="w-full">
-      <div class="w-full h-screen bg-red-900 flex justify-center items-center">
-        <h1 class="text-9xl font-semibold">hello 1</h1>
+      <div class="grid grid-cols-8 grid-rows-10 gap-2">
+        <div class="elem col-span-1 row-span-1" style="--r: 1; --c: 3">
+          <img src="./img/1.jpg" alt="1" />
+        </div>
+        <div class="elem col-span-1 row-span-1" style="--r: 1; --c: 7">
+          <img src="./img/2.jpg" alt="1" />
+        </div>
+        <div class="elem col-span-1 row-span-1" style="--r: 2; --c: 2">
+          <img src="./img/3.jpg" alt="1" />
+        </div>
+        <div class="elem col-span-1 row-span-1" style="--r: 2; --c: 6">
+          <img src="./img/4.jpg" alt="1" />
+        </div>
+        <div class="elem col-span-1 row-span-1" style="--r: 3; --c: 4">
+          <img src="./img/5.jpg" alt="1" />
+        </div>
+
+        <div class="elem col-span-1 row-span-1" style="--r: 3; --c: 2">
+          <img src="./img/6.jpg" alt="1" />
+        </div>
+        <div class="elem col-span-1 row-span-1" style="--r: 4; --c: 6">
+          <img src="./img/7.jpg" alt="1" />
+        </div>
+        <div class="elem col-span-1 row-span-1" style="--r: 4; --c: 1">
+          <img src="./img/8.jpg" alt="1" />
+        </div>
+        <div class="elem col-span-1 row-span-1" style="--r: 5; --c: 2">
+          <img src="./img/9.jpg" alt="1" />
+        </div>
+        <div class="elem col-span-1 row-span-1" style="--r: 5; --c: 6">
+          <img src="./img/10.jpg" alt="1" />
+        </div>
+
+        <div class="elem col-span-1 row-span-1" style="--r: 6; --c: 3">
+          <img src="./img/11.jpg" alt="1" />
+        </div>
+        <div class="elem col-span-1 row-span-1" style="--r: 6; --c: 7">
+          <img src="./img/12.jpg" alt="1" />
+        </div>
+        <div class="elem col-span-1 row-span-1" style="--r: 7; --c: 5">
+          <img src="./img/13.jpg" alt="1" />
+        </div>
+        <div class="elem col-span-1 row-span-1" style="--r: 7; --c: 8">
+          <img src="./img/14.jpg" alt="1" />
+        </div>
+        <div class="elem col-span-1 row-span-1" style="--r: 8; --c: 1">
+          <img src="./img/15.jpg" alt="1" />
+        </div>
+
+        <div class="elem col-span-1 row-span-1" style="--r: 8; --c: 4">
+          <img src="./img/16.jpg" alt="1" />
+        </div>
+        <div class="elem col-span-1 row-span-1" style="--r: 9; --c: 2">
+          <img src="./img/17.jpg" alt="1" />
+        </div>
+        <div class="elem col-span-1 row-span-1" style="--r: 9; --c: 6">
+          <img src="./img/18.jpg" alt="1" />
+        </div>
+        <div class="elem col-span-1 row-span-1" style="--r: 10; --c: 3">
+          <img src="./img/19.jpg" alt="1" />
+        </div>
+        <div class="elem col-span-1 row-span-1" style="--r: 10; --c: 7">
+          <img src="./img/20.jpg" alt="1" />
+        </div>
       </div>
-      <div class="w-full h-screen bg-blue-900 flex justify-center items-center">
-        <h1 class="text-9xl font-semibold">hello 2</h1>
+
+      <div
+        class="fixed top-0 left-0 w-full h-full flex flex-col justify-center items-center text-white"
+      >
+        <h1 class="text-8xl mb-4 uppercase">Who Am I</h1>
+        <p class="text-4xl">Amiba Labs</p>
       </div>
-      <div class="w-full h-screen bg-red-900 flex justify-center items-center">
-        <h1 class="text-9xl font-semibold">hello 3</h1>
+      <div
+        class="w-full h-screen bg-gray-500 flex justify-center items-center mx-auto py-90 relative z-[99] text-center"
+      >
+        <h1 class="text-4xl mx-auto w-1/2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+          dignissimos ducimus iste molestias doloribus officia ipsam, quis
+          accusamus nisi non repudiandae? Hic amet voluptate a aperiam rem dicta
+          commodi doloremque?
+        </h1>
       </div>
     </div>
-    <script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script> -->
+
+    <script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script>
     <script>
       // Initialize Lenis
       const lenis = new Lenis();
@@ -39,6 +137,177 @@
       }
 
       requestAnimationFrame(raf);
+
+      let opt = document.getElementById("myStyle");
+      let optBox = document.getElementById("optBox");
+      opt.addEventListener("change", changeStyle);
+
+      function changeStyle() {
+        // optBox.style.backgroundColor = opt.value;
+        if (opt.value == "style1") {
+          document.querySelectorAll(".elem").forEach((elem) => {
+            let image = elem.querySelector("img");
+            let tl = gsap.timeline();
+
+            let xTransform = gsap.utils.random(-100, 100);
+
+            tl.set(
+              image,
+              {
+                transformOrigin: `${xTransform < 0 ? 0 : "100%"}`,
+              },
+              "start"
+            )
+              .to(
+                image,
+                {
+                  scale: 0,
+                  ease: "none",
+                  rotate: 0,
+                  opacity: 1,
+                  scrollTrigger: {
+                    trigger: image,
+                    start: "top top",
+                    end: "bottom top",
+                    scrub: true,
+                  },
+                },
+                "start"
+              )
+              .to(elem, {
+                xPercent: xTransform,
+                ease: "none",
+                scrollTrigger: {
+                  trigger: image,
+                  start: "top bottom",
+                  end: "bottom top",
+                  scrub: true,
+                },
+              });
+          });
+        } else if (opt.value == "style2") {
+          document.querySelectorAll(".elem").forEach((elem) => {
+            let image = elem.querySelector("img");
+            let tl = gsap.timeline();
+
+            let xTransform = gsap.utils.random(-100, 100);
+
+            tl.set(
+              image,
+              {
+                transformOrigin: `${xTransform < 0 ? 0 : "100%"}`,
+              },
+              "start"
+            )
+              .from(
+                image,
+                {
+                  scale: 2,
+                  opacity: 0,
+                  rotate: 0,
+                  ease: "none",
+                  scrollTrigger: {
+                    trigger: image,
+                    start: "center bottom",
+                    end: "bottom top",
+                    scrub: true,
+                  },
+                },
+                "start"
+              )
+              .to(elem, {
+                xPercent: xTransform,
+                ease: "none",
+                scrollTrigger: {
+                  trigger: image,
+                  start: "top bottom",
+                  end: "bottom top",
+                  scrub: true,
+                },
+              });
+          });
+        } else if (opt.value == "style3") {
+          document.querySelectorAll(".elem").forEach((elem) => {
+            let image = elem.querySelector("img");
+            let tl = gsap.timeline();
+
+            let xTransform = gsap.utils.random(-100, 100);
+
+            tl.set(
+              image,
+              {
+                transformOrigin: `${xTransform < 0 ? 0 : "100%"}`,
+              },
+              "start"
+            )
+              .to(
+                image,
+                {
+                  scale: 0,
+                  rotate: 189,
+                  ease: "none",
+                  scrollTrigger: {
+                    trigger: image,
+                    start: "top top",
+                    end: "bottom top",
+                    scrub: true,
+                  },
+                },
+                "start"
+              )
+              .to(elem, {
+                xPercent: xTransform,
+                ease: "none",
+                scrollTrigger: {
+                  trigger: image,
+                  start: "top bottom",
+                  end: "bottom top",
+                  scrub: true,
+                },
+              });
+          });
+        } else {
+          document.querySelectorAll(".elem").forEach((elem) => {
+            let image = elem.querySelector("img");
+            let tl = gsap.timeline();
+
+            let xTransform = gsap.utils.random(-100, 100);
+
+            tl.set(
+              image,
+              {
+                transformOrigin: `${xTransform < 0 ? 0 : "100%"}`,
+              },
+              "start"
+            )
+              .to(
+                image,
+                {
+                  scale: 0,
+                  ease: "none",
+                  scrollTrigger: {
+                    trigger: image,
+                    start: "top top",
+                    end: "bottom top",
+                    scrub: true,
+                  },
+                },
+                "start"
+              )
+              .to(elem, {
+                xPercent: xTransform,
+                ease: "none",
+                scrollTrigger: {
+                  trigger: image,
+                  start: "top bottom",
+                  end: "bottom top",
+                  scrub: true,
+                },
+              });
+          });
+        }
+      }
+      changeStyle();
     </script>
   </body>
 </html>
