@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Bg</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="flex gap-4">
+      <button
+        id="red"
+        class="rounded border border-[#000000]"
+        style="padding: 10px 20px"
+      >
+        Red
+      </button>
+      <button id="blue" class="rounded" style="padding: 10px 20px">Blue</button>
+      <button id="green" class="rounded" style="padding: 10px 20px">
+        Green
+      </button>
+    </div>
+    <script>
+      const red = document.getElementById("red");
+      const blue = document.getElementById("blue");
+      const green = document.getElementById("green");
+
+      red.addEventListener("click", () => {
+        document.body.style.backgroundColor = "red";
+      });
+      blue.addEventListener("click", () => {
+        document.body.style.backgroundColor = "blue";
+      });
+      green.addEventListener("click", () => {
+        document.body.style.backgroundColor = "green";
+      });
+    </script>
+  </body>
+</html>
