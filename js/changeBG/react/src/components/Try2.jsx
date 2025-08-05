@@ -13,19 +13,19 @@ const Try2 = () => {
           className="bg-black text-white px-4 py-1 rounded-2xl cursor-pointer"
           onClick={() => setBgCol("red")}
         >
-          red
+          Red
         </button>
         <button
           className="bg-black text-white px-4 py-1 rounded-2xl cursor-pointer"
           onClick={() => setBgCol("blue")}
         >
-          blue
+          Blue
         </button>
         <button
           className="bg-black text-white px-4 py-1 rounded-2xl cursor-pointer"
           onClick={() => setBgCol("green")}
         >
-          green
+          Green
         </button>
       </div>
     </div>
